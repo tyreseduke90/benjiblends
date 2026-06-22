@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benji Blends — Clean Cuts. Sharp Confidence.</title>
+<meta name="description" content="Benji Blends — precision fades, sharp line-ups and beard work by an active-duty barber. Military & veteran friendly. Book your next cut.">
+<link rel="icon" href="logo.png">
+
+<!-- social share preview -->
+<meta property="og:title" content="Benji Blends — Clean Cuts. Sharp Confidence.">
+<meta property="og:description" content="Precision fades and sharp line-ups by an active-duty barber. Military & veteran friendly.">
+<meta property="og:image" content="logo.png">
+<meta property="og:type" content="website">
+
+<!--
+  ================= BENJI BLENDS — QUICK EDIT GUIDE =================
+  1. BOOKING LINK  -> search:  #book-link   (replace with Square/Booksy/Fresha/TheCut URL)
+                      or paste an embed widget where it says "PASTE EMBED HERE".
+  2. TEXT TO EDIT  -> search:  EDIT:   (city, hours, address, phone, IG, email, prices)
+  3. ADD REAL PHOTOS (optional, makes it pop) — drop JPGs in this same folder named:
+        hero.jpg     (big background behind the logo)
+        about.jpg    (behind the "behind the chair" section)
+        military.jpg (behind the military appreciation band)
+        book.jpg     (behind the "book your next cut" band)
+        cut1.jpg ... cut6.jpg  (the gallery tiles)
+     The site auto-uses them if present; if missing, it shows a styled fallback. No broken images.
+  ==================================================================
+-->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&family=Oswald:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#070707; --panel:#0e0e0e; --panel-2:#141414; --panel-3:#191919;
+    --line:rgba(201,162,39,.22); --line-soft:rgba(255,255,255,.07);
+    --gold:#C9A227; --gold-lt:#EACB63; --gold-dp:#8A6E1E;
+    --silver:#C7CCD1; --bone:#EFEAE0; --muted:#9C978C;
+    --maxw:1200px;
+    --disp:"Cormorant Garamond",Georgia,serif;
+    --body:"Inter",system-ui,sans-serif;
+    --util:"Oswald",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{background:var(--ink);color:var(--bone);font-family:var(--body);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+  /* film grain overlay */
+  body::after{content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;position:relative;z-index:2}
+
+  .eyebrow{font-family:var(--util);text-transform:uppercase;letter-spacing:.42em;font-size:12px;font-weight:500;color:var(--gold);display:inline-flex;align-items:center;gap:14px}
+  .eyebrow::before{content:"";width:30px;height:2px;background:linear-gradient(90deg,transparent,var(--gold));transform:skewX(-24deg)}
+  .eyebrow.c{justify-content:center}.eyebrow.c::after{content:"";width:30px;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:skewX(-24deg)}
+  h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:1.04;letter-spacing:.004em}
+  .gold{color:var(--gold)}.silver{color:var(--silver)}
+  .skip{position:absolute;left:-999px;top:0;background:var(--gold);color:#000;padding:10px 16px;z-index:300;font-family:var(--util);text-transform:uppercase;letter-spacing:.1em}
+  .skip:focus{left:12px;top:12px}
+  :focus-visible{outline:2px solid var(--gold-lt);outline-offset:3px}
+
+  .btn{font-family:var(--util);text-transform:uppercase;letter-spacing:.16em;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:0;transition:transform .18s,box-shadow .25s,background .25s,color .25s;border-radius:3px}
+  .btn-gold{background:linear-gradient(180deg,var(--gold-lt),var(--gold) 55%,var(--gold-dp));color:#1a1407;padding:14px 28px;box-shadow:0 0 0 1px rgba(201,162,39,.45)}
+  .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 30px -10px rgba(201,162,39,.6)}
+  .btn-ghost{border:1px solid var(--line);color:var(--bone);padding:14px 28px;background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold-lt)}
+
+  /* ---------- NAV ---------- */
+  header.nav{position:fixed;inset:0 0 auto 0;z-index:100;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+  header.nav.scrolled{background:rgba(7,7,7,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .brand{display:flex;align-items:center;gap:13px}
+  .brand img{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);object-fit:cover}
+  .brand .bt{font-family:var(--disp);font-size:22px;font-weight:700;letter-spacing:.05em;color:var(--bone)}
+  .nav-links{display:flex;align-items:center;gap:32px}
+  .nav-links a{font-family:var(--util);text-transform:uppercase;letter-spacing:.16em;font-size:13px;color:var(--bone);opacity:.82;transition:opacity .2s,color .2s}
+  .nav-links a:hover{opacity:1;color:var(--gold-lt)}
+  .hamburger{display:none;background:none;border:1px solid var(--line);width:46px;height:42px;border-radius:3px;color:var(--gold);font-size:20px;cursor:pointer;align-items:center;justify-content:center}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;text-align:center;padding:120px 0 90px;overflow:hidden;
+    background:
+      radial-gradient(ellipse at 50% 32%,rgba(201,162,39,.10),transparent 60%),
+      linear-gradient(180deg,rgba(7,7,7,.72),rgba(7,7,7,.86) 55%,var(--ink)),
+      url('hero.jpg') center/cover no-repeat,
+      url('pattern.svg') center/300px repeat,
+      var(--ink);
+  }
+  /* barber-pole accent rails */
+  .hero .rail{position:absolute;top:0;bottom:0;width:5px;opacity:.55;
+    background:repeating-linear-gradient(45deg,#b1141d 0 9px,#f4f4f2 9px 18px,#214a9c 18px 27px,#f4f4f2 27px 36px)}
+  .hero .rail.l{left:0}.hero .rail.r{right:0}
+  .hero-inner{opacity:0;transform:translateY(20px);animation:rise .9s .15s ease forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.hero-inner{animation:none;opacity:1;transform:none}}
+  .hero-logo{width:min(330px,66vw);margin:0 auto 22px;filter:drop-shadow(0 18px 50px rgba(0,0,0,.8))}
+  .hero h1{font-size:clamp(44px,8vw,92px);margin:8px 0 4px;color:var(--bone)}
+  .hero .tag{font-family:var(--disp);font-style:italic;font-size:clamp(21px,3.2vw,32px);color:var(--silver);margin-bottom:24px;font-weight:500}
+  .hero p.sub{max-width:580px;margin:0 auto 34px;color:#cfcabf;font-size:17px}
+  .hero .cta-group{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .scrollcue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-family:var(--util);text-transform:uppercase;letter-spacing:.3em;font-size:11px;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2}
+  .scrollcue span{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:cue 1.8s infinite}
+  @keyframes cue{0%,100%{opacity:.3}50%{opacity:1}}
+
+  /* ---------- MARQUEE ---------- */
+  .marquee{background:linear-gradient(90deg,var(--panel),#171206,var(--panel));border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0}
+  .marquee .track{display:inline-block;animation:scroll 26s linear infinite;font-family:var(--disp);font-style:italic;font-size:24px;color:var(--gold)}
+  .marquee .track span{margin:0 26px;color:var(--bone)}
+  .marquee .track i{color:var(--gold);font-style:normal}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+
+  /* ---------- SECTION SHELL ---------- */
+  section.block{padding:104px 0;position:relative}
+  .head{margin-bottom:56px}
+  .head h2{font-size:clamp(34px,5.4vw,58px);color:var(--bone);margin-top:16px}
+  .head p{color:var(--muted);max-width:580px;margin-top:14px;font-size:16.5px}
+  .center{text-align:center}.center .head p{margin-left:auto;margin-right:auto}
+  /* faint monogram watermark */
+  .watermark{position:absolute;font-family:var(--disp);font-weight:700;font-size:34vw;line-height:1;color:rgba(201,162,39,.03);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:0;user-select:none}
+  .slash-div{height:2px;width:120px;margin:0 auto;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:skewX(-24deg)}
+
+  /* ---------- SERVICES ---------- */
+  .menu{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
+  .svc{display:flex;align-items:baseline;gap:14px;padding:24px 0;border-bottom:1px solid var(--line-soft);transition:padding-left .2s}
+  .svc:hover{padding-left:8px}
+  .svc .nm{font-family:var(--disp);font-size:26px;font-weight:600;color:var(--bone);white-space:nowrap}
+  .svc .dot{flex:1;border-bottom:1px dotted rgba(154,149,138,.4);transform:translateY(-5px)}
+  .svc .pr{font-family:var(--util);font-size:23px;color:var(--gold);font-weight:500}
+  .svc small{display:block;font-size:13.5px;color:var(--muted);margin-top:3px}
+  .menu-note{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+  .menu-note b{color:var(--silver);font-weight:500}
+
+  /* ---------- ABOUT ---------- */
+  .about-band{position:relative;background:
+      linear-gradient(180deg,rgba(7,7,7,.88),rgba(7,7,7,.92)),
+      url('about.jpg') center/cover no-repeat,
+      url('pattern.svg') center/300px repeat, var(--panel);}
+  .about{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+  .about h2{font-size:clamp(30px,4.6vw,50px);color:var(--bone)}
+  .about p{color:#c4bfb4;margin-top:18px;font-size:16.5px}
+  .about p.lead{color:var(--bone);font-size:19px}
+  .about-card{background:linear-gradient(180deg,var(--panel-3),var(--panel-2));border:1px solid var(--line);border-radius:8px;padding:42px;position:relative;box-shadow:0 30px 60px -30px #000}
+  .about-card .quote{font-family:var(--disp);font-style:italic;font-size:28px;line-height:1.34;color:var(--silver)}
+  .about-card .by{font-family:var(--util);text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--gold);margin-top:24px}
+  .about-card::before{content:"";position:absolute;top:24px;right:28px;width:44px;height:2px;background:var(--gold);transform:skewX(-24deg)}
+  .stats{display:flex;gap:36px;margin-top:30px;flex-wrap:wrap}
+  .stat .n{font-family:var(--disp);font-size:40px;color:var(--gold);font-weight:700;line-height:1}
+  .stat .l{font-family:var(--util);text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--muted);margin-top:6px}
+
+  /* ---------- MILITARY APPRECIATION ---------- */
+  .mil{position:relative;text-align:center;padding:110px 0;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(7,7,7,.84),rgba(10,9,6,.92)),
+      url('military.jpg') center/cover no-repeat,
+      url('pattern.svg') center/300px repeat, #0c0b08;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .mil .chev{display:flex;justify-content:center;gap:6px;margin-bottom:20px}
+  .mil .chev i{width:34px;height:8px;background:var(--gold);clip-path:polygon(0 0,50% 60%,100% 0,100% 38%,50% 100%,0 38%);opacity:.9}
+  .mil h2{font-size:clamp(32px,5vw,56px);color:var(--bone)}
+  .mil p{max-width:600px;margin:18px auto 0;color:#cbc6bb;font-size:17px}
+  .mil .ribbon{display:inline-flex;align-items:center;gap:12px;margin-top:32px;border:1px solid var(--gold);border-radius:3px;padding:14px 26px;font-family:var(--util);text-transform:uppercase;letter-spacing:.2em;font-size:13px;color:var(--gold-lt);background:rgba(201,162,39,.05)}
+  .mil .ribbon b{color:var(--bone);font-weight:500}
+
+  /* ---------- GALLERY ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .tile{aspect-ratio:4/5;border:1px solid var(--line);border-radius:6px;position:relative;overflow:hidden;
+    background:var(--img,none),linear-gradient(150deg,var(--panel-3),var(--panel)),url('pattern.svg') center/150px;
+    background-size:cover,cover,150px;background-position:center;transition:transform .3s,border-color .3s}
+  .tile:hover{transform:translateY(-4px);border-color:var(--gold)}
+  .tile::after{content:"BB";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:700;font-size:38px;color:rgba(201,162,39,.28)}
+  .tile.filled::after{content:""}
+  .tile .cap{position:absolute;left:0;right:0;bottom:0;padding:14px;font-family:var(--util);text-transform:uppercase;letter-spacing:.18em;font-size:11px;color:var(--muted);background:linear-gradient(transparent,rgba(0,0,0,.7));z-index:2}
+
+  /* ---------- TESTIMONIALS ---------- */
+  .tcards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .tcard{background:linear-gradient(180deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:8px;padding:32px}
+  .tcard .stars{color:var(--gold);letter-spacing:3px;font-size:15px;margin-bottom:14px}
+  .tcard p{font-family:var(--disp);font-style:italic;font-size:20px;color:var(--bone);line-height:1.4}
+  .tcard .who{font-family:var(--util);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--gold);margin-top:18px}
+
+  /* ---------- BOOK CTA ---------- */
+  .book{position:relative;text-align:center;padding:120px 0;overflow:hidden;
+    background:
+      linear-gradient(180deg,rgba(7,7,7,.82),rgba(7,7,7,.9)),
+      url('book.jpg') center/cover no-repeat,
+      url('pattern.svg') center/300px repeat, var(--panel);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .book h2{font-size:clamp(36px,6vw,68px);color:var(--bone)}
+  .book p{color:#cbc6bb;max-width:520px;margin:18px auto 34px;font-size:17px}
+  .book .micro{font-family:var(--util);text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--muted);margin-top:28px;display:flex;gap:24px;justify-content:center;flex-wrap:wrap}
+  .book .micro span{display:inline-flex;align-items:center;gap:8px}
+  .book .micro span::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg)}
+
+  /* ---------- VISIT ---------- */
+  .visit{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .vcard{border:1px solid var(--line);border-radius:8px;padding:34px;background:linear-gradient(180deg,var(--panel-2),var(--panel))}
+  .vcard .eyebrow{font-size:11px;margin-bottom:18px}
+  .vcard .row{display:flex;justify-content:space-between;padding:8px 0;font-size:15px;color:var(--bone);border-bottom:1px solid var(--line-soft)}
+  .vcard .row:last-child{border-bottom:0}
+  .vcard .row span:last-child{color:var(--muted)}
+  .vcard a.line{color:var(--gold-lt);font-size:17px;display:block;margin:8px 0;font-weight:500}
+  .vcard p{color:var(--muted);font-size:15px}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:64px 0 40px;border-top:1px solid var(--line);background:var(--panel)}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .foot-brand{display:flex;align-items:center;gap:13px}
+  .foot-brand img{width:46px;height:46px;border-radius:50%;border:1px solid var(--line)}
+  .foot-brand .bt{font-family:var(--disp);font-size:23px;font-weight:700;letter-spacing:.05em}
+  .foot-links{display:flex;gap:26px;font-family:var(--util);text-transform:uppercase;letter-spacing:.16em;font-size:12px;color:var(--muted);flex-wrap:wrap}
+  .foot-links a:hover{color:var(--gold-lt)}
+  .copy{color:var(--muted);font-size:12px;margin-top:30px;text-align:center;font-family:var(--util);letter-spacing:.14em;text-transform:uppercase}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+  @media(max-width:880px){
+    .nav-links{position:fixed;inset:76px 0 auto 0;background:rgba(7,7,7,.97);flex-direction:column;gap:0;padding:8px 0;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .3s;backdrop-filter:blur(12px)}
+    .nav-links.open{transform:none}
+    .nav-links a{padding:16px 28px;width:100%;text-align:center;font-size:15px}
+    .nav-links .btn-gold{margin:12px 28px;justify-content:center}
+    .hamburger{display:inline-flex}
+    .menu{grid-template-columns:1fr;gap:0}
+    .about{grid-template-columns:1fr;gap:32px}
+    .grid,.tcards{grid-template-columns:1fr 1fr}
+    .visit{grid-template-columns:1fr}
+    section.block{padding:76px 0}
+  }
+  @media(max-width:520px){.grid,.tcards{grid-template-columns:1fr}.hero .rail{width:3px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#book">Skip to booking</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="Benji Blends home">
+      <img src="logo.png" alt=""><span class="bt">Benji Blends</span>
+    </a>
+    <nav class="nav-links" id="navlinks" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#service-members">Military</a>
+      <a href="#gallery">The Work</a>
+      <a href="#visit">Visit</a>
+      <a class="btn btn-gold" href="#book-link">Book now</a>
+    </nav>
+    <button class="hamburger" id="ham" aria-label="Menu" aria-expanded="false"><span aria-hidden="true">&#9776;</span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" id="hero">
+    <span class="rail l" aria-hidden="true"></span><span class="rail r" aria-hidden="true"></span>
+    <div class="wrap hero-inner">
+      <img class="hero-logo" src="logo.png" alt="Benji Blends logo">
+      <span class="eyebrow c">Active-duty barber &middot; <!-- EDIT: city, state -->New Jersey</span>
+      <h1>Benji <span class="gold">Blends</span></h1>
+      <p class="tag">Clean cuts. Sharp confidence.</p>
+      <p class="sub">Precision fades, crisp line-ups and beard work with a soldier's eye for detail. Sit down sharp &mdash; walk out squared away.</p>
+      <div class="cta-group">
+        <a class="btn btn-gold" href="#book-link">Book your cut</a>
+        <a class="btn btn-ghost" href="#services">See the menu</a>
+      </div>
+    </div>
+    <div class="scrollcue" aria-hidden="true">Scroll<span></span></div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <i>&#9670;</i> <span>Precision Fades</span> <i>&#9670;</i> <span>Sharp Line-Ups</span> <i>&#9670;</i> <span>Beard Sculpts</span> <i>&#9670;</i> <span>Hot-Towel Finish</span> <i>&#9670;</i> <span>Military Friendly</span>
+      <i>&#9670;</i> <span>Precision Fades</span> <i>&#9670;</i> <span>Sharp Line-Ups</span> <i>&#9670;</i> <span>Beard Sculpts</span> <i>&#9670;</i> <span>Hot-Towel Finish</span> <i>&#9670;</i> <span>Military Friendly</span>
+    </div>
+  </div>
+
+  <section class="block" id="services">
+    <span class="watermark" aria-hidden="true">BB</span>
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow c">The Menu</span>
+        <h2>Services &amp; <span class="gold">pricing</span></h2>
+        <p>Straightforward pricing, no surprises. Every service finishes with a hot-towel and a clean line-up.</p>
+      </div>
+      <!-- EDIT: prices ($XX) and names to match her real menu -->
+      <div class="menu reveal">
+        <div class="svc"><div><span class="nm">Signature fade</span><small>Skin, low, mid or high &mdash; tailored to you</small></div><span class="dot"></span><span class="pr">$XX</span></div>
+        <div class="svc"><div><span class="nm">Cut &amp; beard</span><small>Full haircut with beard sculpt &amp; line</small></div><span class="dot"></span><span class="pr">$XX</span></div>
+        <div class="svc"><div><span class="nm">Beard line-up</span><small>Shape, edge &amp; hot-towel finish</small></div><span class="dot"></span><span class="pr">$XX</span></div>
+        <div class="svc"><div><span class="nm">Enlisted / cadet cut</span><small>High-and-tight, regulation-ready</small></div><span class="dot"></span><span class="pr">$XX</span></div>
+        <div class="svc"><div><span class="nm">Kids cut (12 &amp; under)</span><small>Same sharp finish, smaller chair</small></div><span class="dot"></span><span class="pr">$XX</span></div>
+        <div class="svc"><div><span class="nm">House call</span><small>Mobile cut at your place &mdash; by request</small></div><span class="dot"></span><span class="pr">$XX</span></div>
+      </div>
+      <p class="menu-note"><b>Deposits secure your slot.</b> No-shows &amp; late cancellations may forfeit the deposit.</p>
+    </div>
+  </section>
+
+  <section class="block about-band" id="about">
+    <div class="wrap about">
+      <div class="reveal">
+        <span class="eyebrow">Behind the chair</span>
+        <h2>Trained in <span class="gold">discipline,</span> built on detail</h2>
+        <p class="lead">Benji serves on active duty &mdash; and brings that same standard to the chair.</p>
+        <p>Every fade is blended clean, every line is set sharp, and every appointment runs on time. Whether you're in uniform, just got out, or simply want a cut that holds the line, you'll leave looking squared away and feeling confident.</p>
+        <div class="stats">
+          <div class="stat"><div class="n">100%</div><div class="l">On-time standard</div></div>
+          <div class="stat"><div class="n">5&#9733;</div><div class="l">Client rated</div></div>
+          <div class="stat"><div class="n">All</div><div class="l">Hair types welcome</div></div>
+        </div>
+      </div>
+      <div class="about-card reveal">
+        <p class="quote">"A clean cut isn't vanity. It's how you carry yourself before you say a word."</p>
+        <p class="by">&mdash; Benji, owner &amp; barber</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MILITARY APPRECIATION ===== -->
+  <section class="mil" id="service-members">
+    <div class="wrap reveal">
+      <div class="chev" aria-hidden="true"><i></i><i></i><i></i></div>
+      <span class="eyebrow c">Serving those who serve</span>
+      <h2>Built for the <span class="gold">men &amp; women in uniform</span></h2>
+      <p>As an active-duty service member herself, Benji knows what it means to hold the standard. Active-duty, reserve, National Guard, and veterans always get looked after in this chair &mdash; on time, regulation-sharp, and treated with the respect you've earned.</p>
+      <div class="ribbon"><b>Military &amp; Veteran Appreciation</b> &middot; Ask about your rate</div>
+    </div>
+  </section>
+
+  <section class="block" id="gallery">
+    <span class="watermark" aria-hidden="true">BB</span>
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow c">The Work</span>
+        <h2>Fresh off the <span class="gold">chair</span></h2>
+        <p>Swap these tiles for real before-and-afters &mdash; nothing sells a barber like the work itself.</p>
+      </div>
+      <!-- To add a photo: drop cut1.jpg in this folder, the tile fills automatically.
+           (style sets the image; add class "filled" to hide the BB watermark.) -->
+      <div class="grid reveal">
+        <div class="tile" style="--img:url('cut1.jpg')"><span class="cap">Signature fade</span></div>
+        <div class="tile" style="--img:url('cut2.jpg')"><span class="cap">Beard sculpt</span></div>
+        <div class="tile" style="--img:url('cut3.jpg')"><span class="cap">Line-up detail</span></div>
+        <div class="tile" style="--img:url('cut4.jpg')"><span class="cap">Skin fade</span></div>
+        <div class="tile" style="--img:url('cut5.jpg')"><span class="cap">Cadet cut</span></div>
+        <div class="tile" style="--img:url('cut6.jpg')"><span class="cap">Full finish</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="reviews" style="background:var(--panel)">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow c">Word of mouth</span>
+        <h2>What clients <span class="gold">say</span></h2>
+      </div>
+      <!-- EDIT: replace with real reviews once she has them -->
+      <div class="tcards reveal">
+        <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Cleanest fade I've had since basic. On time, sharp, and she actually listens."</p><div class="who">&mdash; Marcus T.</div></div>
+        <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"Walked in stressed, walked out feeling like a million bucks. The line-up is unreal."</p><div class="who">&mdash; Dee R.</div></div>
+        <div class="tcard"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p>"My go-to before every inspection. Regulation-ready, every single time."</p><div class="who">&mdash; SSG Allen</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap reveal">
+      <span class="eyebrow c">Ready when you are</span>
+      <h2>Book your <span class="gold">next cut</span></h2>
+      <p>Pick your service, choose a time, lock it in. You'll get a confirmation and a reminder so you never miss your slot.</p>
+      <!-- MAIN BOOK BUTTON: paste booking URL in href.
+           To embed the live calendar instead, delete this <a> and PASTE EMBED HERE. -->
+      <a class="btn btn-gold" href="#book-link" style="padding:17px 44px;font-size:14px">Book online</a>
+      <div class="micro">
+        <span>Instant confirmation</span><span>Text &amp; email reminders</span><span>Secure deposit</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="visit">
+    <div class="wrap">
+      <div class="head center reveal">
+        <span class="eyebrow c">Find the chair</span>
+        <h2>Hours &amp; <span class="gold">location</span></h2>
+      </div>
+      <div class="visit reveal">
+        <div class="vcard">
+          <span class="eyebrow">Hours</span>
+          <!-- EDIT: hours -->
+          <div class="row"><span>Mon &ndash; Fri</span><span>9:00a &ndash; 7:00p</span></div>
+          <div class="row"><span>Saturday</span><span>8:00a &ndash; 6:00p</span></div>
+          <div class="row"><span>Sunday</span><span>By request</span></div>
+        </div>
+        <div class="vcard">
+          <span class="eyebrow">Location</span>
+          <!-- EDIT: address + directions link -->
+          <p>123 Example Ave<br>Your Town, NJ 08000</p>
+          <a class="line" href="#">Get directions &rarr;</a>
+          <p style="margin-top:10px">Free parking out front.</p>
+        </div>
+        <div class="vcard">
+          <span class="eyebrow">Contact</span>
+          <!-- EDIT: phone / IG / email -->
+          <a class="line" href="tel:+10000000000">(000) 000-0000</a>
+          <a class="line" href="https://instagram.com/">@benjiblends</a>
+          <a class="line" href="mailto:hello@benjiblends.com">hello@benjiblends.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <div class="foot-brand"><img src="logo.png" alt=""><span class="bt"><span class="gold">B</span><span class="silver">B</span> Benji Blends</span></div>
+      <div class="foot-links">
+        <a href="#services">Services</a><a href="#about">About</a><a href="#service-members">Military</a><a href="#gallery">The Work</a><a href="#book-link">Book</a><a href="https://instagram.com/">Instagram</a>
+      </div>
+    </div>
+    <p class="copy">&copy; <span id="yr"></span> Benji Blends &middot; Clean cuts. Sharp confidence.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>24)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  var ham=document.getElementById('ham'),links=document.getElementById('navlinks');
+  ham.addEventListener('click',function(){var o=links.classList.toggle('open');ham.setAttribute('aria-expanded',o)});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');ham.setAttribute('aria-expanded','false')}});
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

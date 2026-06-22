@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <g fill="none" stroke="#8A6F24" stroke-width="2" stroke-opacity="0.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- scissors (top-left) -->
+    <circle cx="42" cy="74" r="7"/>
+    <circle cx="60" cy="74" r="7"/>
+    <path d="M47 69 L84 44"/>
+    <path d="M55 69 L84 50"/>
+    <!-- comb (center) -->
+    <rect x="138" y="140" width="62" height="13" rx="3"/>
+    <path d="M144 153 L144 173 M152 153 L152 173 M160 153 L160 173 M168 153 L168 173 M176 153 L176 173 M184 153 L184 173 M192 153 L192 173"/>
+    <!-- chevron (bottom-left) -->
+    <path d="M52 250 L74 233 L96 250"/>
+    <path d="M52 262 L74 245 L96 262"/>
+    <!-- straight razor (bottom-right) -->
+    <path d="M212 250 L232 232"/>
+    <path d="M232 232 L268 224 L264 234 L236 240 Z"/>
+    <!-- star (top-right) -->
+    <path d="M240 58 L242.82 66.12 L251.41 66.29 L244.57 71.48 L247.05 79.71 L240 74.8 L232.95 79.71 L235.43 71.48 L228.59 66.29 L237.18 66.12 Z" fill="#8A6F24" fill-opacity="0.5" stroke="none"/>
+  </g>
+</svg>
